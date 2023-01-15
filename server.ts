@@ -23,7 +23,7 @@ app.get('/health-check', (req, res) => {
 });
 
 app.use('/api/github', GithubRoutes);
-
+console.log(__dirname);
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
